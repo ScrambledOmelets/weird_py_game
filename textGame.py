@@ -4,18 +4,29 @@ import storyBranch1 as br1
 import storyBranch2 as br2
 
 
-#this is a different var so i can logic
+
 
 
 def main():
     
+    #this works fine as well
+    #the functions just return strings lol
     decision1 = intro()
     decision2 = 0
 
-    if decision1 == 1:
+    if decision1 == '1':
+        print("")
+        time.sleep(1.5)
         decision2 = br1.room()
-    elif decision1 == 2:
+        
+    elif decision1 == '2':
+        print('')
+        time.sleep(1.5)
         decision2 = br2.scream()
+        time.sleep(1.5)
+        print('')
+        br2.ball()
+    
 
 #works fine
 def intro():
@@ -40,6 +51,7 @@ def intro():
             if int(choice) == 1:
                 print('You blink your eyes, only to have your pitch black environment replaced with a bright white one.')
                 #looper = False
+                break
             elif int(choice) == 2:
                 print('You scream at the top of your lungs.')
                 time.sleep(1.5)

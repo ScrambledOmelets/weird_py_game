@@ -23,6 +23,7 @@ def room():
                 time.sleep(1.5)
                 print('Achieving nothing')
                 #for main logic
+                break
               
             elif int(choice) == 3:
                 print('You sit there doing nothing like an idiot...')

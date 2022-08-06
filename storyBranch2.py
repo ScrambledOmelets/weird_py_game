@@ -1,3 +1,4 @@
+from asyncore import loop
 import time
 
 def scream():
@@ -5,13 +6,13 @@ def scream():
     print('what do you do?')
     print('1 - look for a light')
 
+    looper = True
 
-    while True:
+    while looper:
 
         choice = input('>>')
-        #i might have to make choice a global variable so that i can determine which function i need to call next
-
-        #using try and exceptions stops the program from crashing if someone enters a non number
+        #whenever you want the while loop to stop, you either put a break (like in another file)
+        #or you use a variable set to true and set it to false after your code runs (like below)
         try:
             if int(choice) == 1:
                 print('you feel around, your hand brushing against something weird.')
@@ -19,7 +20,7 @@ def scream():
                 print('you feel around the object further')
                 time.sleep(1.5)
                 print('it\'s a small furry ball you feel')
-                break
+                looper = False
             else:
                 print('enter either 1, 2, or 3:')
         except:
