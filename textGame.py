@@ -4,9 +4,6 @@ import storyBranch1 as br1
 import storyBranch2 as br2
 
 
-
-
-
 def main():
     
     #this works fine as well

@@ -5,19 +5,15 @@ def room():
     print('what do you do?')
     print('1 - look around', '2 - cry', '3 - do nothing', sep='\n')
 
-    #logic
-  
 
     while True:
 
         choice = input('>>')
-        #i might have to make choice a global variable so that i can determine which function i need to call next
-
-        #using try and exceptions stops the program from crashing if someone enters a non number
+        
         try:
             if int(choice) == 1:
                 print('room looks weird. its white and stuff')
-                looper = False
+                break
             elif int(choice) == 2:
                 print('You cry like a baby...')
                 time.sleep(1.5)
